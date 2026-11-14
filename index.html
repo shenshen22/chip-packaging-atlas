@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111d2a">
+  <meta name="description" content="Chip Packaging Atlas：探索先進封裝平台、關鍵互連技術與工程挑戰的互動圖鑑。">
+  <title>Chip Packaging Atlas｜先進封裝技術圖鑑</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="data/technologies.js"></script>
+  <script defer src="assets/app.js"></script>
+</head>
+<body data-page="home">
+  <div id="site-header"></div>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="pulse"></span> ADVANCED PACKAGING / OPEN ATLAS</div>
+          <h1 id="hero-title">晶片之外，<br><em>還有一個世界。</em></h1>
+          <p class="hero-lead">從 Flip-Chip 到 2.5D、3D 堆疊。用結構示意、工程問題與技術比較，建立看得懂、能持續更新的先進封裝知識地圖。</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#explore">開始探索 <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-outline-light" href="compare.html">比較不同技術 <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="hero-notes"><span>10 項技術條目</span><span>官方資料連結</span><span>互動式對照</span></div>
+        </div>
+        <div class="hero-visual" aria-label="晶片、微凸塊、中介層、封裝基板的概念分層示意圖" role="img">
+          <div class="visual-topline"><span>FIG. 01</span><span>PACKAGE CROSS SECTION / CONCEPTUAL</span></div>
+          <div class="board-glow"></div>
+          <div class="die die-a"><div class="die-glyph">CPU</div></div>
+          <div class="die die-b"><div class="die-glyph">HBM</div></div>
+          <div class="micro-row"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="interposer-layer"><span>INTERPOSER / DENSE ROUTING</span></div>
+          <div class="via-row"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="substrate-layer"><div class="substrate-lines"></div><span>PACKAGE SUBSTRATE</span></div>
+          <div class="ball-row"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <span class="viz-callout callout-one">01 / DIE</span><span class="viz-callout callout-two">02 / INTERCONNECT</span><span class="viz-callout callout-three">03 / SUBSTRATE</span>
+          <div class="visual-caption">Schematic only · Not to scale</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-strip" aria-label="網站特色">
+      <div class="container quick-grid">
+        <div><b>01</b><span>從結構開始理解</span></div>
+        <div><b>02</b><span>以工程問題深化</span></div>
+        <div><b>03</b><span>依官方資料查證</span></div>
+        <div><b>04</b><span>依規則持續擴充</span></div>
+      </div>
+    </section>
+
+    <section class="section container" id="explore" aria-labelledby="explore-title">
+      <div class="section-heading">
+        <div><p class="kicker">BROWSE THE ATLAS / 01</p><h2 id="explore-title">探索技術圖鑑</h2><p class="section-sub">依技術類型篩選，或輸入關鍵字搜尋。平台與製程屬於不同層級，標籤將協助你辨別。</p></div>
+        <span class="count-pill" id="result-count" aria-live="polite">載入中</span>
+      </div>
+      <div class="filter-box">
+        <label class="search-field" for="tech-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg><input type="search" id="tech-search" placeholder="搜尋 CoWoS、RDL、3D、翹曲…" autocomplete="off"></label>
+        <div class="filter-buttons" id="category-filters" role="group" aria-label="技術類型篩選"></div>
+      </div>
+      <div class="tech-grid" id="tech-grid" aria-live="polite"></div>
+      <p class="no-results" id="no-results" hidden>找不到符合的技術。試著縮短關鍵字，或切回「全部」。</p>
+    </section>
+
+    <section class="section band">
+      <div class="container">
+        <div class="section-heading"><div><p class="kicker">LEARNING PATH / 02</p><h2>三步建立封裝觀念</h2><p class="section-sub">先理解最基本的連線，再看晶片怎麼並排、怎麼堆疊。</p></div><a class="text-link" href="glossary.html">開啟名詞表 ↗</a></div>
+        <div class="path-grid">
+          <a class="path-card" href="technology.html?id=flipchip"><span class="path-no">STEP 01</span><span class="path-icon">↳</span><h3>先認識接點</h3><p>Flip-Chip 與 RDL：封裝如何把訊號導出去？</p><span class="path-cta">從 Flip-Chip 開始 →</span></a>
+          <a class="path-card" href="technology.html?id=cowos"><span class="path-no">STEP 02</span><span class="path-icon">↔</span><h3>再看平面整合</h3><p>CoWoS 與 EMIB：多晶片並排時，互連怎麼做？</p><span class="path-cta">認識 2.5D →</span></a>
+          <a class="path-card" href="technology.html?id=soic"><span class="path-no">STEP 03</span><span class="path-icon">↥</span><h3>最後探索垂直堆疊</h3><p>SoIC、Foveros 與 Hybrid Bonding：3D 帶來哪些新挑戰？</p><span class="path-cta">探索 3D →</span></a>
+        </div>
+      </div>
+    </section>
+    <section class="container section closing-section"><div><p class="kicker">BEYOND THE DIAGRAM</p><h2>懂結構，<br>也要懂取捨。</h2></div><div><p>真正的先進封裝研發，不只是在問「哪個技術比較先進」，更要看互連密度、散熱、翹曲、測試與製程良率之間的平衡。</p><a class="btn btn-dark" href="compare.html">打開技術比較器 ↗</a></div></section>
+  </main>
+  <div id="site-footer"></div>
+</body>
+</html>
